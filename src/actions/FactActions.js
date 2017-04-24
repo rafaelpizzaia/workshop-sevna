@@ -15,6 +15,18 @@ const FactActions = {
         console.log('error', error);
       });
   },
+
+  sortFacts() {
+    Dispatcher.dispatch({
+      type: FactActionTypes.SORT_FACTS,
+    });
+  },
+
+  cleanFacts() {
+    Dispatcher.dispatch({
+      type: FactActionTypes.CLEAN_FACTS,
+    });
+  },
 };
 
 export default FactActions;

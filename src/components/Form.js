@@ -25,6 +25,8 @@ class Form extends Component {
   render() {
     const {
       categories,
+      onSortFacts,
+      onCleanFacts,
     } = this.props;
 
     const styles = {
@@ -47,7 +49,6 @@ class Form extends Component {
       }
     }
 
-    console.log('render form');
     return (
       <div
         style={styles.root}
@@ -89,14 +90,14 @@ class Form extends Component {
 
         <button
           style={styles.btn}
-          onClick={this.handleClick}
+          onClick={onSortFacts}
         >
           Sort Facts
         </button>
 
         <button
           style={styles.btn}
-          onClick={this.handleClick}
+          onClick={onCleanFacts}
         >
           Clean Facts
         </button>

@@ -8,7 +8,6 @@ class Facts extends Component {
       facts,
     } = this.props;
 
-    console.log('render facts');
     return (
       <div>
         {

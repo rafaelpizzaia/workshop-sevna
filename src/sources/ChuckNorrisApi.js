@@ -1,5 +1,12 @@
 import Request from 'superagent';
 
+function normalizeResponse(fact) {
+  return {
+    ...fact,
+    category: fact.category && fact.category[0], 
+  };
+}
+
 const ChuckNorrisApi = {
   getCategories() {
     const getCategoriesUrl = 'https://api.chucknorris.io/jokes/categories';
@@ -35,7 +42,7 @@ const ChuckNorrisApi = {
             if (err) {
               reject(err);
             } else {
-              resolve(res.body);
+              resolve(normalizeResponse(res.body));
             }
           });
     });

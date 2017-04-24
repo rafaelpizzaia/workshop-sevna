@@ -18,6 +18,8 @@ class AppContainer extends Component {
     super(props);
 
     this.handleFetchFact = this.handleFetchFact.bind(this);
+    this.handleSortFacts = this.handleSortFacts.bind(this);
+    this.handleCleanFacts = this.handleCleanFacts.bind(this);
   }
 
   static getStores() {
@@ -45,6 +47,14 @@ class AppContainer extends Component {
     FactActions.getFact(category);
   }
 
+  handleSortFacts() {
+    FactActions.sortFacts();
+  }
+
+  handleCleanFacts() {
+    FactActions.cleanFacts();
+  }
+
   render() {
     console.log('render');
     return (
@@ -52,6 +62,8 @@ class AppContainer extends Component {
         <Form
           categories={this.state.categories}
           onFetchFact={this.handleFetchFact}
+          onSortFacts={this.handleSortFacts}
+          onCleanFacts={this.handleCleanFacts}
         />
         <Facts facts={this.state.facts} />
       </div>
