@@ -43,6 +43,7 @@ class Form extends Component {
         width: 120,
         height: 30,
         fontWeight: 'bold',
+        marginRight: 10,
       }
     }
 
@@ -84,6 +85,20 @@ class Form extends Component {
           onClick={this.handleClick}
         >
           Get a Fact
+        </button>
+
+        <button
+          style={styles.btn}
+          onClick={this.handleClick}
+        >
+          Sort Facts
+        </button>
+
+        <button
+          style={styles.btn}
+          onClick={this.handleClick}
+        >
+          Clean Facts
         </button>
       </div>
     );

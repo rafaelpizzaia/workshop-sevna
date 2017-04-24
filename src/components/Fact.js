@@ -5,6 +5,7 @@ class Fact extends Component {
     const {
       icon_url,
       value,
+      category,
     } = this.props.fact;
 
     return (
@@ -20,7 +21,11 @@ class Fact extends Component {
       >
         <img
           alt="chuck norris"
-          src={icon_url}
+          style={{
+            width: 35,
+            marginRight: 10,
+          }}
+          src={!!category ? require(`../images/${category}.svg`) : icon_url}
         />
         <label>
           Fact: &nbsp;
