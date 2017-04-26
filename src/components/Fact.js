@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class Fact extends Component {
   render() {
@@ -36,6 +36,14 @@ class Fact extends Component {
       </div>
     )
   }
+};
+
+Fact.propTypes = {
+  fact: PropTypes.shape({
+    icon_url: PropTypes.string,
+    value: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
 };
 
 export default Fact;

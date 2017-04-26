@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class Form extends Component {
   constructor(props) {
@@ -105,5 +105,12 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  categories: PropTypes.array.isRequired,
+  onSortFacts: PropTypes.func.isRequired,
+  onCleanFacts: PropTypes.func.isRequired,
+  onFetchFact: PropTypes.func.isRequired,
+};
 
 export default Form;

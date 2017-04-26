@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Fact from './Fact';
 import './Facts';
 
@@ -24,5 +24,9 @@ class Facts extends Component {
     );
   }
 }
+
+Facts.propTypes = {
+  facts: PropTypes.array.isRequired,
+};
 
 export default Facts;
